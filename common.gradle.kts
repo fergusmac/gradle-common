@@ -11,6 +11,8 @@ project.repositories {
     mavenLocal()
 }
 
+
+
 dependencies {
     "implementation"("ch.qos.logback:logback-classic:$logback_version")
     "implementation"("io.github.oshai:kotlin-logging-jvm:$oshai_logging_version")
