@@ -80,6 +80,7 @@ if args.update:
     try:
     # Check that submodule is on master
         output = subprocess.check_output(["git", "-C", "gradle-common", "symbolic-ref", "--short", "HEAD"], stderr=subprocess.STDOUT)
+        print(output)
         if output.strip() != "master":
             sys.exit("Submodule is not on 'master' branch")
 
