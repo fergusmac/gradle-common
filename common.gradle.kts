@@ -5,6 +5,7 @@ val logback_version = "1.4.11"
 val oshai_logging_version = "5.1.0"
 val kdatetime_version = "0.4.1"
 
+//test comment
 
 project.repositories {
     mavenCentral()
