@@ -45,8 +45,10 @@ if args.version == "patch":
     version_parts[2] = str(int(version_parts[2]) + 1)
 elif args.version == "minor":
     version_parts[1] = str(int(version_parts[1]) + 1)
+    version_parts[2] = '0'  # reset patch to 0
 elif args.version == "major":
     version_parts[0] = str(int(version_parts[0]) + 1)
+    version_parts[1] = version_parts[2] = '0'  # reset minor and patches to 0
 else:
     sys.exit("Invalid command line argument. Must be patch, minor, or major.")
 
