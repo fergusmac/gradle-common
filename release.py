@@ -91,11 +91,11 @@ if args.update:
         # Check status of submodule
         subprocess.check_output(["git", "status", "gradle-common"], stderr=subprocess.STDOUT)
 
-        # Read version from build.gradle.kts
-        with open("build.gradle.kts", "r") as file:
+        # Read version from settings.gradle.kts
+        with open("settings.gradle.kts", "r") as file:
             lines = file.readlines()
-        # Extract "self_version_name" value
-        version_line = next((line for line in lines if "self_version_name" in line), None)
+        # Extract "root project name" value
+        version_line = next((line for line in lines if "rootProject.name" in line), None)
         if version_line is None:
             sys.exit("No self_version_name line found in build.gradle.kts")
         self_version_name = re.search(r'"([^"]*)', version_line).group(1)
