@@ -3,6 +3,8 @@ apply(plugin = "java")
 
 val logback_version = "1.4.11"
 val oshai_logging_version = "5.1.0"
+val kdatetime_version = "0.4.1"
+
 
 project.repositories {
     mavenCentral()
@@ -12,6 +14,7 @@ project.repositories {
 dependencies {
     implementation("ch.qos.logback:logback-classic:$logback_version")
     implementation("io.github.oshai:kotlin-logging-jvm:$oshai_logging_version")
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:$kdatetime_version")
 }
 
 project.configure<org.gradle.api.publish.PublishingExtension> {
