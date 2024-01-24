@@ -12,9 +12,9 @@ project.repositories {
 }
 
 dependencies {
-    implementation("ch.qos.logback:logback-classic:$logback_version")
-    implementation("io.github.oshai:kotlin-logging-jvm:$oshai_logging_version")
-    implementation("org.jetbrains.kotlinx:kotlinx-datetime:$kdatetime_version")
+    "implementation"("ch.qos.logback:logback-classic:$logback_version")
+    "implementation"("io.github.oshai:kotlin-logging-jvm:$oshai_logging_version")
+    "implementation"("org.jetbrains.kotlinx:kotlinx-datetime:$kdatetime_version")
 }
 
 project.configure<org.gradle.api.publish.PublishingExtension> {
