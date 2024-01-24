@@ -79,14 +79,14 @@ subprocess.check_call(["./gradlew", "publishToMavenLocal"])
 if args.update:
     try:
     # Check that submodule is on master
-            output = subprocess.check_output(["git", "-C", "gradle-common", "symbolic-ref", "--short", "HEAD"], stderr=subprocess.STDOUT)
-            if output.strip() != "master":
-                sys.exit("Submodule is not on 'master' branch")
+        output = subprocess.check_output(["git", "-C", "gradle-common", "symbolic-ref", "--short", "HEAD"], stderr=subprocess.STDOUT)
+        if output.strip() != "master":
+            sys.exit("Submodule is not on 'master' branch")
 
-            # Check that submodule is up to date
-            output = subprocess.check_output(["git", "-C", "gradle-common", "rev-list", "origin/master...master"], stderr=subprocess.STDOUT)
-            if output:
-                sys.exit("Submodule is not up-to-date with 'origin/master'")
+        # Check that submodule is up to date
+        output = subprocess.check_output(["git", "-C", "gradle-common", "rev-list", "origin/master...master"], stderr=subprocess.STDOUT)
+        if output:
+            sys.exit("Submodule is not up-to-date with 'origin/master'")
 
         # Check status of submodule
         subprocess.check_output(["git", "status", "gradle-common"], stderr=subprocess.STDOUT)
