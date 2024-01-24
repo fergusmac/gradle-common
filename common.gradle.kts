@@ -1,9 +1,15 @@
 apply(plugin = "maven-publish")
 apply(plugin = "java")
 
+val logback_version = "1.4.11"
+
 project.repositories {
     mavenCentral()
     mavenLocal()
+}
+
+dependencies {
+    implementation("ch.qos.logback:logback-classic:$logback_version")
 }
 
 project.configure<org.gradle.api.publish.PublishingExtension> {
