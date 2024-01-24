@@ -4,6 +4,9 @@ import re
 import subprocess
 import sys
 
+# Change working directory one step up
+os.chdir("..")
+
 # Command line arguments
 parser = argparse.ArgumentParser()
 parser.add_argument("version", help="patch, minor, or major")
