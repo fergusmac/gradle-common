@@ -18,7 +18,7 @@ except subprocess.CalledProcessError as e:
 
 # Build the project with Gradle
 try:
-    subprocess.check_call(["./gradlew", "build"])
+    subprocess.check_call([".\gradlew.bat", "build"])
 except subprocess.CalledProcessError as e:
     sys.exit("Gradle build failed")
 
@@ -73,7 +73,7 @@ subprocess.check_call(["git", "tag", new_version])
 subprocess.check_call(["git", "push", "origin", "--tags"])
 
 # Publish to mavenLocal
-subprocess.check_call(["./gradlew", "publishToMavenLocal"])
+subprocess.check_call([".\gradlew.bat", "publishToMavenLocal"])
 
 # Update submodule, if option is set
 if args.update:
