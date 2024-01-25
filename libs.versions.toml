@@ -8,7 +8,7 @@ logback = "1.4.11"
 mongo = "4.11.0"
 mysql = "8.0.33"
 
-cliniko-lt = "0.1.5"
+cliniko = "0.1.6"
 mongo-types = "0.3.18"
 
 
@@ -26,7 +26,7 @@ mongo-bson = { module = "org.mongodb:bson-kotlinx", version.ref = "mongo" }
 mongo-driver = { module = "org.mongodb:mongodb-driver-kotlin-coroutine", version.ref = "mongo" }
 mysql-connect = { module= "mysql:mysql-connector-java", version.ref = "mysql" }
 
-cliniko = {module = "fergusm:cliniko-kt", version.ref = "cliniko-kt"}
+cliniko = {module = "fergusm:cliniko-kt", version.ref = "cliniko"}
 mongo-types = {module = "fergusm:mongo-types", version.ref = "mongo-types"}
 
 
