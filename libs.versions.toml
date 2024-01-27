@@ -11,6 +11,7 @@ mysql = "8.0.33"
 
 cliniko = "0.1.6"
 mongo-types = "0.3.19"
+common-utils = "0.1.2"
 
 
 
@@ -30,6 +31,7 @@ mysql-connect = { module= "mysql:mysql-connector-java", version.ref = "mysql" }
 
 cliniko = {module = "fergusm:cliniko", version.ref = "cliniko"}
 mongo-types = {module = "fergusm:mongo-types", version.ref = "mongo-types"}
+common-utils = {module = "fergusm:common-utils", version.ref = "common-utils"}
 
 
 [bundles]
