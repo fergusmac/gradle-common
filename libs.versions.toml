@@ -2,6 +2,7 @@
 kotlin = "1.9.21"
 kotlinx-json = "1.6.0"
 kotlinx-datetime = "0.4.1"
+kotlinx-sl4j = "1.7.3"
 klogging = "5.1.0"
 ktor = "2.3.6"
 logback = "1.4.11"
@@ -18,6 +19,7 @@ logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 klogging = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "klogging" }
 kotlinx-datetime = { module= "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
 kotlinx-json = { module= "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-json" }
+kotlinx-sl4j = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-slf4j", version.ref= "kotlinx-sl4j"}
 ktor-cli-auth = { module = "io.ktor:ktor-client-auth", version.ref = "ktor" }
 ktor-cli-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
 ktor-cli-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
@@ -31,7 +33,7 @@ mongo-types = {module = "fergusm:mongo-types", version.ref = "mongo-types"}
 
 
 [bundles]
-logging = ["logback", "klogging"]
+logging = ["logback", "klogging", "kotlinx-sl4j"]
 kotlinx = ["kotlinx-datetime", "kotlinx-json"]
 ktor-cli = ["ktor-cli-core", "ktor-cli-cio", "ktor-cli-log", "ktor-cli-auth"]
 mongo = ["mongo-bson", "mongo-driver", "mongo-types"]
