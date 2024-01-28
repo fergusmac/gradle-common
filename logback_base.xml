@@ -1,0 +1,16 @@
+<included>
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR}/${APP_NAME}.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>time=%date level=%level module=%logger msg="%msg" %kvp thread=%thread%n</pattern>
+        </encoder>
+
+        <!-- This policy will roll the logs daily-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_DIR}/${APP_NAME}-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- Controls the maximum number of log files to keep -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
+</included>
