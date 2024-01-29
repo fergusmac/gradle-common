@@ -10,7 +10,7 @@ mongo = "4.11.0"
 mysql = "8.0.33"
 
 cliniko = "0.1.6"
-mongo-types = "0.3.26"
+mongo-types = "0.4.0"
 common-utils = "0.1.3"
 
 
