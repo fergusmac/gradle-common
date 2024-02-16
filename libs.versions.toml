@@ -9,7 +9,7 @@ logback = "1.4.11"
 mongo = "4.11.0"
 mysql = "8.0.33"
 
-cliniko = "0.1.19"
+cliniko = "0.1.20"
 mongo-types = "0.5.8"
 common-utils = "0.1.6"
 
